@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.topo {
+    background-color: white;
+    padding: 10px;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #add8e6;
+}
+
+.conteudo {
+    background-color: #00008b;
+    color: white;
+    padding: 20px;
+}
+
+.texto {
+    margin: 20px 0;
+}
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container h2 {
+    text-align: center;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.login-container input[type="text"], .login-container input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.admin-topo .logo {
+    float: left;
+}
+
+.admin-conteudo {
+    background-color: #00008b;
+    color: white;
+    padding: 20px;
+    clear: both;
+}
+
+.admin-form {
+    margin: 20px 0;
+}
+
+.admin-form input[type="text"], .admin-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.admin-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+}
+
+.admin-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
