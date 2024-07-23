@@ -1,22 +1,18 @@
 <?php
-session_start();
-if (!isset($_SESSION['loggedin'])) {
-    header("Location: login.php");
-    exit;
-}
-include 'db.php';
+include 'session.php';
+include '../db/db.php';
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Administração</title>
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
 <div class="admin-topo">
-    <img src="../imgs/carlalogo.jpg" width="300" height="300" alt="Logo" class="logo">
+    <img src="https://fgacarlamaria.com.br/imgs/carlalogo.jpg" alt="Logo" class="logo">
 </div>
 
 <div class="admin-conteudo">
@@ -51,6 +47,12 @@ include 'db.php';
         <input type="submit" name="submit_contato" value="Salvar">
     </form>
 
+    <form action="admin.php" method="post" class="admin-form">
+        <h2>SEO</h2>
+        <textarea name="keywords" rows="5" cols="50" placeholder="Palavras-chave"></textarea>
+        <input type="submit" name="submit_seo" value="Salvar">
+    </form>
+
     <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (isset($_POST['submit_quem_sou'])) {
@@ -72,6 +74,10 @@ include 'db.php';
             $url_mapa = $conn->real_escape_string($_POST['url_mapa']);
             $conn->query("DELETE FROM contato");
             $conn->query("INSERT INTO contato (nome_clinica, endereco, telefone, url_mapa) VALUES ('$nome', '$endereco', '$telefone', '$url_mapa')");
+        } elseif (isset($_POST['submit_seo'])) {
+            $keywords = $conn->real_escape_string($_POST['keywords']);
+            $conn->query("DELETE FROM seo");
+            $conn->query("INSERT INTO seo (keywords) VALUES ('$keywords')");
         }
     }
     ?>

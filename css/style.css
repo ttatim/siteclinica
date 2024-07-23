@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #0000FF;
     margin: 0;
     padding: 0;
 }
@@ -8,6 +8,7 @@ body {
 .topo {
     background-color: white;
     padding: 10px;
+    overflow: hidden;
 }
 
 .logo {
@@ -33,10 +34,12 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    background-color: white;
 }
 
 .menu li a:hover {
     background-color: #add8e6;
+    color: white;
 }
 
 .conteudo {
@@ -87,6 +90,12 @@ body {
 
 .login-container input[type="submit"]:hover {
     background-color: #45a049;
+}
+
+.admin-topo {
+    background-color: white;
+    padding: 10px;
+    overflow: hidden;
 }
 
 .admin-topo .logo {

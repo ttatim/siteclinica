@@ -7,7 +7,7 @@ include '../db/db.php';
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <script>
         function showError() {
             alert("Usuário ou senha inválidos");
@@ -35,6 +35,9 @@ include '../db/db.php';
 
             if ($result->num_rows > 0) {
                 $_SESSION['loggedin'] = true;
+                $_SESSION['username'] = $username;
+                $_SESSION['start'] = time();
+                $_SESSION['expire'] = $_SESSION['start'] + (60 * 60); // 1 hora
                 header("Location: admin.php");
             } else {
                 echo "<script>showError();</script>";
